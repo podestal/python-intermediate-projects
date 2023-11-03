@@ -1,8 +1,6 @@
-from turtle import Turtle, Screen
+from turtle import Screen
+import turtle as t
 import random
-
-my_turtle = Turtle()
-my_turtle.color('blue')
 
 ############## Drawing a square ##########
 
@@ -34,20 +32,38 @@ my_turtle.color('blue')
 
 ############### Random Walk #############
 
-colors = ['CornflowerBlue', 'DarkOrchid', 'IndianRed', 'DeepSkyBlue', 'LightSeaGreen', 'wheat', 'SlateGray', "SeaGreen"]
-directions = [0, 90, 180, 270]
-my_turtle.pensize(15)
-my_turtle.speed('fastest')
+# my_turtle = t.Turtle()
+# t.colormode(255)
 
-for _ in range(400):
-    my_turtle.color(random.choice(colors))
-    my_turtle.forward(30)
-    my_turtle.setheading(random.choice(directions))
+def random_color():
+    r = random.randint(0,255)
+    b = random.randint(0,255)
+    g = random.randint(0,255)
+    return (r, g, b)
 
+# directions = [0, 90, 180, 270]
+# my_turtle.pensize(15)
+# my_turtle.speed('fastest')
 
+# for _ in range(400):
+#     my_turtle.color(random_color())
+#     my_turtle.forward(30)
+#     my_turtle.setheading(random.choice(directions))
 
+############### Spirograph #############
 
+jack = t.Turtle()
+t.colormode(255)
 
+counter = 10
+jack.speed('fastest')
+
+while counter <= 720:
+    jack.color(random_color())
+    jack.circle(100)
+    jack.forward(10)
+    jack.right(10)
+    counter += 10
 
 
 screen = Screen()
