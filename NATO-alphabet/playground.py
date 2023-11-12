@@ -21,9 +21,28 @@ numbers = [1, 2, 3]
 # print(squared_numbers)
 
 ####### Filtering Even Numbers #######
-numbers = [9, 0, 32, 8, 2, 8, 64, 29, 42, 99]
-even_numbers = [number for number in numbers if number % 2 == 0]
-print(even_numbers)
+# numbers = [9, 0, 32, 8, 2, 8, 64, 29, 42, 99]
+# even_numbers = [number for number in numbers if number % 2 == 0]
+# print(even_numbers)
 
-####### Data Overlap ##############
+####### Dict Comprehension ##############
+
+# import random
+# names = ['Alex', 'Beth', 'Caroline', 'Dave', 'Eleanor', 'Freddie']
+# student_scores = {student: random.randint(1, 100) for student in names}
+# print(student_scores)
+# passed_students = {student:score for (student, score) in student_scores.items() if score > 60}
+# print(passed_students)
+
+######## Dict Comprehension Excercise I ##########
+def words_count(message):
+    return {word: len(word) for word in message.split(' ')}
+
+print(words_count('What is the Airspeed Volocity of an Unladen Swallow?'))
+
+######## Dict Comprehension Excercise II #########
+
+celsius_dict = {'Monday': 12, 'Tuesday': 14, 'Wednesday': 15, 'Thursday': 14, 'Friday': 21, 'Saturday': 22, 'Sunday': 24}
+farenheit_dict = {day:round((temp * (9/5)) + 32, 2) for (day, temp) in celsius_dict.items()}
+print(farenheit_dict)
 
