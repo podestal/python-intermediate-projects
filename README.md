@@ -3,4 +3,8 @@ This repostitory is going to hold a list of intermediate python prjects, each pr
 1. Quizz game -> OOP
 2. Hirst game -> Tuples, GUI
 3. Turtle race -> Higher Order Fnxs
-4. Snake Game - > Coordinate System
+4. Snake game - > Coordinate System
+5. State game -> CSV, Pands library
+6. NATO alphabet -> list and dict comprehension
+7. Miles to KM -> Tkinter GUI, args, kwargs
+
