@@ -35,14 +35,32 @@ numbers = [1, 2, 3]
 # print(passed_students)
 
 ######## Dict Comprehension Excercise I ##########
-def words_count(message):
-    return {word: len(word) for word in message.split(' ')}
+# def words_count(message):
+#     return {word: len(word) for word in message.split(' ')}
 
-print(words_count('What is the Airspeed Volocity of an Unladen Swallow?'))
+# print(words_count('What is the Airspeed Volocity of an Unladen Swallow?'))
 
 ######## Dict Comprehension Excercise II #########
 
-celsius_dict = {'Monday': 12, 'Tuesday': 14, 'Wednesday': 15, 'Thursday': 14, 'Friday': 21, 'Saturday': 22, 'Sunday': 24}
-farenheit_dict = {day:round((temp * (9/5)) + 32, 2) for (day, temp) in celsius_dict.items()}
-print(farenheit_dict)
+# celsius_dict = {'Monday': 12, 'Tuesday': 14, 'Wednesday': 15, 'Thursday': 14, 'Friday': 21, 'Saturday': 22, 'Sunday': 24}
+# farenheit_dict = {day:round((temp * (9/5)) + 32, 2) for (day, temp) in celsius_dict.items()}
+# print(farenheit_dict)
 
+import pandas
+student_dict = {
+    'student': ['Angela', 'James', 'Lily'],
+    'score': [56, 76, 98]
+}
+
+# for (key, value) in student_dict.items():
+#     print(value)
+
+student_df = pandas.DataFrame(student_dict)
+# print(student_df)
+
+# for (key, value) in student_df.items():
+#     print(value)
+
+for (index, row) in student_df.iterrows():
+    if row.score == 56:
+        print(row.student)
