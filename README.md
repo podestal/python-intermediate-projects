@@ -7,4 +7,5 @@ This repostitory is going to hold a list of intermediate python prjects, each pr
 5. State game -> CSV, Pands library
 6. NATO alphabet -> list and dict comprehension
 7. Miles to KM -> Tkinter GUI, args, kwargs
+8. 100 Movies -> Web Scraping
 
