@@ -1,4 +1,5 @@
 # This project is about getting the 100 most played songs for a specific week and create a Spotify playlist with those songs
+
 # 1 Scraping the Billboard Hot 100
 import requests
 from bs4 import BeautifulSoup
@@ -8,10 +9,9 @@ response = requests.get(URL)
 soup = BeautifulSoup(response.text, 'html.parser')
 titles = soup.select('li h3#title-of-a-story.c-title')
 songs = []
-# with open('./python-intermediate-projects/spotify-playlist/songs.txt', mode='w') as file:
 for title in titles:
-        # file.write(f"{title.getText().strip()}\n")
     songs.append(title.getText().strip())
+
 # 2 Authentication with Spotify
 import spotipy 
 from spotipy.oauth2 import SpotifyOAuth
@@ -31,8 +31,8 @@ sp = spotipy.Spotify(
         username=USERNAME,
     )
 )
-
 user_id = sp.current_user()["id"]
+
 # 3 Search Spotify for the songs from Step 1
 song_uris = []
 year = songs_date.split('-')[0]
