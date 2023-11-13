@@ -8,4 +8,4 @@ This repostitory is going to hold a list of intermediate python prjects, each pr
 6. NATO alphabet -> list and dict comprehension
 7. Miles to KM -> Tkinter GUI, args, kwargs
 8. 100 Movies -> Web Scraping
-
+9. Spotify playlist -> Web Scraping
