@@ -15,6 +15,7 @@ cookie = driver.find_element(By.XPATH, value='//*[@id="cookie"]')
 secs = time.time() + 5
 end = time.time() + (60 * 5)
 
+
 while time.time() < end:
     cookie.click()
     if time.time() >= secs:
