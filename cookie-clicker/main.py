@@ -11,9 +11,20 @@ driver.maximize_window()
 
 cookie = driver.find_element(By.XPATH, value='//*[@id="cookie"]')
 
-end = time.time() + (60 * 2)
+
+secs = time.time() + 5
+end = time.time() + (60 * 5)
 
 while time.time() < end:
     cookie.click()
+    if time.time() >= secs:
+        items_to_purchase = driver.find_elements(By.CSS_SELECTOR, value='div#store div')
+        for i in range(8):
+            print(items_to_purchase[i].get_attribute('class'))
+            if items_to_purchase[i].get_attribute('class') == 'grayed':
+                items_to_purchase[i-1].click()
+                break
+        secs = time.time() + 5
+
 
 # driver.quit()
