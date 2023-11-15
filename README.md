@@ -10,3 +10,4 @@ This repostitory is going to hold a list of intermediate python prjects, each pr
 8.  100 Movies -> Web Scraping
 9.  Spotify playlist -> Web Scraping
 10. Cookie clicker -> Selenium Web Scraping
+11. Linkedin apply -> Selenium Web automation
